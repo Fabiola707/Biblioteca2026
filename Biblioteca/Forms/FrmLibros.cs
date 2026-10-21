@@ -151,7 +151,7 @@ namespace Biblioteca.Forms
 
             try
             {
-                int existencia = Convert.ToInt32(txtExistencia.Text.Trim());
+                int existencia = int.Parse(txtExistencia.Text.Trim());//cambiar el convert a un int parse
 
                 if (existencia < -1)
                 {
@@ -175,7 +175,8 @@ namespace Biblioteca.Forms
                 libro.Titulo = txtTitulo.Text.Trim();
                 libro.IDAutor = Convert.ToInt32(cmbAutor.SelectedValue);
                 libro.IDCategoria = Convert.ToInt32(cmbCategoria.SelectedValue);
-                libro.Existencia = txtExistencia.Text;
+                libro.Existencia = int.Parse (txtExistencia.Text);//agregar el int parse aqui tambien
+
                 libro.Activo = chkActivo.Checked;
 
                 if (repo.Agregar(libro))
@@ -353,14 +354,15 @@ namespace Biblioteca.Forms
             {
                 LibroRepositorio repo = new LibroRepositorio();
                 int idCategoria = Convert.ToInt32(cmbFiltroCategoria.SelectedValue);
-
+              
                 if (idCategoria == 0)
                 {
                     CargarTodos();
                 }
                 else
                 {
-                    List<Libro> lista = repo.FiltrarPorCategoria(cmbFiltroCategoria.SelectedValue);
+                    //List<Libro> lista = repo.FiltrarPorCategoria(cmbFiltroCategoria.SelectedValue);
+                    List<Libro> lista = repo.FiltrarPorCategoria(idCategoria); //cambiar el filtro de categoria por el id la cual ya es un int
                     MostrarLista(lista);
                 }
             }

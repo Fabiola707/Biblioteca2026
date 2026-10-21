@@ -2,3 +2,7 @@ D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErro
 D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErrores\obj\Debug\BibliotecaErrores.csproj.SuggestedBindingRedirects.cache
 D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErrores\obj\Debug\BibliotecaErrores.exe.config
 D:\Proyectos\UNIDEP\POO\2026\practica final\ProyectoBibliotecaPOO\BibliotecaErrores\obj\Debug\BibliotecaErrores.csproj.CoreCompileInputs.cache
+C:\Users\95122\OneDrive\Documents\Biblioteca2026\Biblioteca\obj\Debug\BibliotecaErrores.csproj.AssemblyReference.cache
+C:\Users\95122\OneDrive\Documents\Biblioteca2026\Biblioteca\obj\Debug\BibliotecaErrores.csproj.SuggestedBindingRedirects.cache
+C:\Users\95122\OneDrive\Documents\Biblioteca2026\Biblioteca\obj\Debug\BibliotecaErrores.exe.config
+C:\Users\95122\OneDrive\Documents\Biblioteca2026\Biblioteca\obj\Debug\BibliotecaErrores.csproj.CoreCompileInputs.cache

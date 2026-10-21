@@ -119,12 +119,12 @@ namespace Biblioteca.Forms
 
             try
             {
-                int cantidad = txtCantidad.Text;
+                int cantidad = int.Parse(txtCantidad.Text); //el int parse de nuevo
 
                 Prestamo prestamo = new Prestamo();
 
                 prestamo.IDAlumno = Convert.ToInt32(cmbAlumno.SelectedValue);
-                prestamo.FechaPrestamo = dtpFechaPrestamo.Text;
+                prestamo.FechaPrestamo = dtpFechaPrestamo.Value.Date;//me gusta el valor de date time
                 prestamo.FechaLimite = dtpFechaLimite.Value.Date;
                 prestamo.Estado = "Activo";
 
@@ -138,7 +138,7 @@ namespace Biblioteca.Forms
 
                 IPrestamo repo = new PrestamoRepositorio();
 
-                if (repo.Registrar(prestamo))
+                if (repo.Registrar(prestamo, detalles)) // agregar detalles pasar los detalles como un segundo parametro
                 {
                     MessageBox.Show("Préstamo registrado correctamente.",
                         "Biblioteca", MessageBoxButtons.OK, MessageBoxIcon.Information);

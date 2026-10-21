@@ -1,1 +1,11 @@
 ************CheckList**********************
+en el form de libros
+	- linea 365 //List<Libro> lista = repo.FiltrarPorCategoria(cmbFiltroCategoria.SelectedValue);
+                    List<Libro> lista = repo.FiltrarPorCategoria(idCategoria); //cambiar el filtro de categoria por el id la cual ya es un int
+	-linea 154  int existencia = int.Parse(txtExistencia.Text.Trim());//cambiar el convert a un int parse
+	-linea 178     libro.Existencia = int.Parse (txtExistencia.Text);//agregar el int parse aqui tambien
+form de prestamos
+	-linea 122                 int cantidad = int.Parse(txtCantidad.Text); //el int parse de nuevo
+	-linea 127    prestamo.FechaPrestamo = dtpFechaPrestamo.Value.Date;//me gusta el valor de date time
+	-linea 141 
+                if (repo.Registrar(prestamo, detalles)) // agregar detalles pasar los detalles como un segundo parametro

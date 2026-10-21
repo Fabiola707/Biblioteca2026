@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-
 using Biblioteca.Interfaces;
 using Biblioteca.Models;
-
 namespace Biblioteca.Repositories
 {
     public class LibroRepositorio : ILibro

@@ -15,7 +15,7 @@
           }
         }
       },
-      "Google.Protobuf/3.32.0": {
+      "Google.Protobuf/3.35.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -83,33 +83,14 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Threading.Tasks.Extensions": "4.5.4"
-        },
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "MySql.Data/9.6.0": {
+      "MySql.Data/26.10.0": {
         "type": "package",
         "dependencies": {
           "BouncyCastle.Cryptography": "2.6.2",
-          "Google.Protobuf": "3.32.0",
+          "Google.Protobuf": "3.35.0",
           "K4os.Compression.LZ4.Streams": "1.3.8",
-          "System.Configuration.ConfigurationManager": "8.0.0",
-          "ZstdSharp.Port": "0.8.6"
+          "System.Configuration.ConfigurationManager": "10.0.8",
+          "ZstdSharp.Port": "0.8.8"
         },
         "frameworkAssemblies": [
           "System",
@@ -151,23 +132,23 @@
           }
         }
       },
-      "System.Buffers/4.5.1": {
+      "System.Buffers/4.6.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
         "compile": {
-          "ref/net45/System.Buffers.dll": {
+          "lib/net462/System.Buffers.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net461/System.Buffers.dll": {
+          "lib/net462/System.Buffers.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Configuration.ConfigurationManager/8.0.0": {
+      "System.Configuration.ConfigurationManager/10.0.8": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Configuration"
@@ -207,59 +188,63 @@
           }
         }
       },
-      "System.Memory/4.5.5": {
+      "System.Memory/4.6.0": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Buffers": "4.6.0",
+          "System.Numerics.Vectors": "4.6.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.0"
         },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
         "compile": {
-          "lib/net461/System.Memory.dll": {
+          "lib/net462/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net461/System.Memory.dll": {
+          "lib/net462/System.Memory.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Numerics.Vectors/4.5.0": {
+      "System.Numerics.Vectors/4.6.0": {
         "type": "package",
         "frameworkAssemblies": [
-          "System.Numerics",
-          "mscorlib"
+          "System.Numerics"
         ],
         "compile": {
-          "ref/net46/System.Numerics.Vectors.dll": {
+          "lib/net462/System.Numerics.Vectors.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net46/System.Numerics.Vectors.dll": {
+          "lib/net462/System.Numerics.Vectors.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "System.Runtime.CompilerServices.Unsafe/6.1.0": {
         "type": "package",
         "frameworkAssemblies": [
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net462/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net462/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -281,12 +266,12 @@
           }
         }
       },
-      "ZstdSharp.Port/0.8.6": {
+      "ZstdSharp.Port/0.8.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
-          "System.Memory": "4.5.5",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "System.Memory": "4.6.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
           "lib/net462/ZstdSharp.dll": {}
@@ -310,7 +295,7 @@
           }
         }
       },
-      "Google.Protobuf/3.32.0": {
+      "Google.Protobuf/3.35.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.3"
@@ -378,33 +363,14 @@
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Threading.Tasks.Extensions": "4.5.4"
-        },
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
-        "compile": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "MySql.Data/9.6.0": {
+      "MySql.Data/26.10.0": {
         "type": "package",
         "dependencies": {
           "BouncyCastle.Cryptography": "2.6.2",
-          "Google.Protobuf": "3.32.0",
+          "Google.Protobuf": "3.35.0",
           "K4os.Compression.LZ4.Streams": "1.3.8",
-          "System.Configuration.ConfigurationManager": "8.0.0",
-          "ZstdSharp.Port": "0.8.6"
+          "System.Configuration.ConfigurationManager": "10.0.8",
+          "ZstdSharp.Port": "0.8.8"
         },
         "frameworkAssemblies": [
           "System",
@@ -424,23 +390,23 @@
           }
         }
       },
-      "System.Buffers/4.5.1": {
+      "System.Buffers/4.6.0": {
         "type": "package",
-        "frameworkAssemblies": [
-          "mscorlib"
-        ],
         "compile": {
-          "ref/net45/System.Buffers.dll": {
+          "lib/net462/System.Buffers.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net461/System.Buffers.dll": {
+          "lib/net462/System.Buffers.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Configuration.ConfigurationManager/8.0.0": {
+      "System.Configuration.ConfigurationManager/10.0.8": {
         "type": "package",
         "frameworkAssemblies": [
           "System.Configuration"
@@ -480,59 +446,63 @@
           }
         }
       },
-      "System.Memory/4.5.5": {
+      "System.Memory/4.6.0": {
         "type": "package",
         "dependencies": {
-          "System.Buffers": "4.5.1",
-          "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+          "System.Buffers": "4.6.0",
+          "System.Numerics.Vectors": "4.6.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.0"
         },
-        "frameworkAssemblies": [
-          "System",
-          "mscorlib"
-        ],
         "compile": {
-          "lib/net461/System.Memory.dll": {
+          "lib/net462/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net461/System.Memory.dll": {
+          "lib/net462/System.Memory.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Numerics.Vectors/4.5.0": {
+      "System.Numerics.Vectors/4.6.0": {
         "type": "package",
         "frameworkAssemblies": [
-          "System.Numerics",
-          "mscorlib"
+          "System.Numerics"
         ],
         "compile": {
-          "ref/net46/System.Numerics.Vectors.dll": {
+          "lib/net462/System.Numerics.Vectors.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net46/System.Numerics.Vectors.dll": {
+          "lib/net462/System.Numerics.Vectors.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "System.Runtime.CompilerServices.Unsafe/6.1.0": {
         "type": "package",
         "frameworkAssemblies": [
           "mscorlib"
         ],
         "compile": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net462/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net462/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.5.4": {
@@ -554,12 +524,12 @@
           }
         }
       },
-      "ZstdSharp.Port/0.8.6": {
+      "ZstdSharp.Port/0.8.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
-          "System.Memory": "4.5.5",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "System.Memory": "4.6.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.1.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "compile": {
           "lib/net462/ZstdSharp.dll": {}
@@ -591,14 +561,14 @@
         "packageIcon.png"
       ]
     },
-    "Google.Protobuf/3.32.0": {
-      "sha512": "fsKxV5bhcvXmZi+cUo5+IxzRMBHwHeFO8G5utNa9f+Mu37kmfy8JcUVvWPt4cX7EuQWAjjHUjZqVl7nGSTRHRg==",
+    "Google.Protobuf/3.35.0": {
+      "sha512": "OrUZCUzBXqdSmsQSWp/EPeINjOBcMU+PrZEJegw0aLgOGFHZ9ZI37X/SFrIxo8C9ghKynaKpPr3BVPc4EujWYg==",
       "type": "package",
-      "path": "google.protobuf/3.32.0",
+      "path": "google.protobuf/3.35.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.32.0.nupkg.sha512",
+        "google.protobuf.3.35.0.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -677,40 +647,21 @@
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
       ]
     },
-    "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
-      "sha512": "W8DPQjkMScOMTtJbPwmPyj9c3zYSFGawDW3jwlBOOsnY+EzZFLgNQ/UMkK35JmkNOVPdCyPr2Tw7Vv9N+KA3ZQ==",
+    "MySql.Data/26.10.0": {
+      "sha512": "2mhCTH+6kqDvGRlaQ+2GGa+42TPGygcIwXulLwmAMNdTNUhL2dZ/LXMOmMZcJg88CAlBwkBtzOzDrUwq1InkZw==",
       "type": "package",
-      "path": "microsoft.bcl.asyncinterfaces/5.0.0",
+      "path": "mysql.data/26.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
-        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
-        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
-        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
-        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
-        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
-        "microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
-        "microsoft.bcl.asyncinterfaces.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "MySql.Data/9.6.0": {
-      "sha512": "jjCXNBxLLQHBcyYyOP4yp5jqljStH2qGFXXg3jBMdwYQk9ihpLH9BXoMyc/J3421pENBDjCf/eGi9Ow0Ib7LUA==",
-      "type": "package",
-      "path": "mysql.data/9.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
+        "CONTRIBUTING.md",
         "LICENSE",
         "README",
         "README.md",
         "lib/net10.0/MySql.Data.dll",
         "lib/net10.0/MySql.Data.xml",
+        "lib/net11.0/MySql.Data.dll",
+        "lib/net11.0/MySql.Data.xml",
         "lib/net462/MySql.Data.dll",
         "lib/net462/MySql.Data.xml",
         "lib/net48/MySql.Data.dll",
@@ -724,7 +675,7 @@
         "lib/netstandard2.1/MySql.Data.dll",
         "lib/netstandard2.1/MySql.Data.xml",
         "logo-mysql-170x115.png",
-        "mysql.data.9.6.0.nupkg.sha512",
+        "mysql.data.26.10.0.nupkg.sha512",
         "mysql.data.nuspec",
         "runtimes/win-x64/native/comerr64.dll",
         "runtimes/win-x64/native/gssapi64.dll",
@@ -733,63 +684,51 @@
         "runtimes/win-x64/native/krbcc64.dll"
       ]
     },
-    "System.Buffers/4.5.1": {
-      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+    "System.Buffers/4.6.0": {
+      "sha512": "lN6tZi7Q46zFzAbRYXTIvfXcyvQQgxnY7Xm6C6xQ9784dEL1amjM6S6Iw4ZpsvesAKnRVsM4scrDQaDqSClkjA==",
       "type": "package",
-      "path": "system.buffers/4.5.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Buffers.dll",
-        "lib/net461/System.Buffers.xml",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.1/System.Buffers.dll",
-        "lib/netstandard1.1/System.Buffers.xml",
-        "lib/netstandard2.0/System.Buffers.dll",
-        "lib/netstandard2.0/System.Buffers.xml",
-        "lib/uap10.0.16299/_._",
-        "ref/net45/System.Buffers.dll",
-        "ref/net45/System.Buffers.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.1/System.Buffers.dll",
-        "ref/netstandard1.1/System.Buffers.xml",
-        "ref/netstandard2.0/System.Buffers.dll",
-        "ref/netstandard2.0/System.Buffers.xml",
-        "ref/uap10.0.16299/_._",
-        "system.buffers.4.5.1.nupkg.sha512",
-        "system.buffers.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Configuration.ConfigurationManager/8.0.0": {
-      "sha512": "JlYi9XVvIREURRUlGMr1F6vOFLk7YSY4p1vHo4kX3tQ0AGrjqlRWHDi66ImHhy6qwXBG3BJ6Y1QlYQ+Qz6Xgww==",
-      "type": "package",
-      "path": "system.configuration.configurationmanager/8.0.0",
+      "path": "system.buffers/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Buffers.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Buffers.dll",
+        "lib/net462/System.Buffers.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.6.0.nupkg.sha512",
+        "system.buffers.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/10.0.8": {
+      "sha512": "QG+HHwJjLyUiRuA9axr5pDqHAxboo7FXCTRakxMABE9CUAUij/tsd/MsgQPJUEppkf+YBLT+F/P/wKIVCAIcNg==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/10.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
         "buildTransitive/net461/System.Configuration.ConfigurationManager.targets",
         "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
+        "buildTransitive/net8.0/_._",
         "buildTransitive/netcoreapp2.0/System.Configuration.ConfigurationManager.targets",
+        "lib/net10.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net10.0/System.Configuration.ConfigurationManager.xml",
         "lib/net462/System.Configuration.ConfigurationManager.dll",
         "lib/net462/System.Configuration.ConfigurationManager.xml",
-        "lib/net6.0/System.Configuration.ConfigurationManager.dll",
-        "lib/net6.0/System.Configuration.ConfigurationManager.xml",
-        "lib/net7.0/System.Configuration.ConfigurationManager.dll",
-        "lib/net7.0/System.Configuration.ConfigurationManager.xml",
         "lib/net8.0/System.Configuration.ConfigurationManager.dll",
         "lib/net8.0/System.Configuration.ConfigurationManager.xml",
+        "lib/net9.0/System.Configuration.ConfigurationManager.dll",
+        "lib/net9.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+        "system.configuration.configurationmanager.10.0.8.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -820,99 +759,66 @@
         "version.txt"
       ]
     },
-    "System.Memory/4.5.5": {
-      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+    "System.Memory/4.6.0": {
+      "sha512": "OEkbBQoklHngJ8UD8ez2AERSk2g+/qpAaSWWCBFbpH727HxDq5ydVkuncBaKcKfwRqXGWx64dS6G1SUScMsitg==",
       "type": "package",
-      "path": "system.memory/4.5.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.Memory.dll",
-        "lib/net461/System.Memory.xml",
-        "lib/netcoreapp2.1/_._",
-        "lib/netstandard1.1/System.Memory.dll",
-        "lib/netstandard1.1/System.Memory.xml",
-        "lib/netstandard2.0/System.Memory.dll",
-        "lib/netstandard2.0/System.Memory.xml",
-        "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.5.nupkg.sha512",
-        "system.memory.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Numerics.Vectors/4.5.0": {
-      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
-      "type": "package",
-      "path": "system.numerics.vectors/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Numerics.Vectors.dll",
-        "lib/net46/System.Numerics.Vectors.xml",
-        "lib/netcoreapp2.0/_._",
-        "lib/netstandard1.0/System.Numerics.Vectors.dll",
-        "lib/netstandard1.0/System.Numerics.Vectors.xml",
-        "lib/netstandard2.0/System.Numerics.Vectors.dll",
-        "lib/netstandard2.0/System.Numerics.Vectors.xml",
-        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
-        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
-        "lib/uap10.0.16299/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/System.Numerics.Vectors.dll",
-        "ref/net45/System.Numerics.Vectors.xml",
-        "ref/net46/System.Numerics.Vectors.dll",
-        "ref/net46/System.Numerics.Vectors.xml",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard1.0/System.Numerics.Vectors.dll",
-        "ref/netstandard1.0/System.Numerics.Vectors.xml",
-        "ref/netstandard2.0/System.Numerics.Vectors.dll",
-        "ref/netstandard2.0/System.Numerics.Vectors.xml",
-        "ref/uap10.0.16299/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.numerics.vectors.4.5.0.nupkg.sha512",
-        "system.numerics.vectors.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
-      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
-      "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "path": "system.memory/4.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Memory.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Memory.dll",
+        "lib/net462/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "system.memory.4.6.0.nupkg.sha512",
+        "system.memory.nuspec"
+      ]
+    },
+    "System.Numerics.Vectors/4.6.0": {
+      "sha512": "t+SoieZsRuEyiw/J+qXUbolyO219tKQQI0+2/YI+Qv7YdGValA6WiuokrNKqjrTNsy5ABWU11bdKOzUdheteXg==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Numerics.Vectors.targets",
+        "buildTransitive/net462/_._",
+        "lib/net462/System.Numerics.Vectors.dll",
+        "lib/net462/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "system.numerics.vectors.4.6.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.1.0": {
+      "sha512": "5o/HZxx6RVqYlhKSq8/zronDkALJZUT2Vz0hx43f0gwe8mwlM0y2nYlqdBwLMzr262Bwvpikeb/yEwkAa5PADg==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/6.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "buildTransitive/net461/System.Runtime.CompilerServices.Unsafe.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/net6.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll",
-        "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net462/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net462/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/net7.0/_._",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-        "system.runtime.compilerservices.unsafe.nuspec",
-        "useSharedDesignerContext.txt"
+        "system.runtime.compilerservices.unsafe.6.1.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec"
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.4": {
@@ -952,10 +858,10 @@
         "version.txt"
       ]
     },
-    "ZstdSharp.Port/0.8.6": {
-      "sha512": "iP4jVLQoQmUjMU88g1WObiNr6YKZGvh4aOXn3yOJsHqZsflwRsxZPcIBvNXgjXO3vQKSLctXGLTpcBPLnWPS8A==",
+    "ZstdSharp.Port/0.8.8": {
+      "sha512": "UIDFkA5DC3en3tOJ3Mof11yBx9kUQLsaeo/oFdvN6Bbkr9E9+VCqfIadHci8cu+I51K2Sl7XYWVl2R/mA75NBQ==",
       "type": "package",
-      "path": "zstdsharp.port/0.8.6",
+      "path": "zstdsharp.port/0.8.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -968,28 +874,28 @@
         "lib/netcoreapp3.1/ZstdSharp.dll",
         "lib/netstandard2.0/ZstdSharp.dll",
         "lib/netstandard2.1/ZstdSharp.dll",
-        "zstdsharp.port.0.8.6.nupkg.sha512",
+        "zstdsharp.port.0.8.8.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
-      "MySql.Data >= 9.6.0"
+      "MySql.Data >= 26.10.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\salaz\\.nuget\\packages\\": {},
+    "C:\\Users\\95122\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos\\UNIDEP\\POO\\2026\\practica final\\ProyectoBibliotecaPOO\\BibliotecaErrores\\BibliotecaErrores.csproj",
+      "projectUniqueName": "C:\\Users\\95122\\OneDrive\\Documents\\Biblioteca2026\\Biblioteca\\BibliotecaErrores.csproj",
       "projectName": "BibliotecaErrores",
-      "projectPath": "D:\\Proyectos\\UNIDEP\\POO\\2026\\practica final\\ProyectoBibliotecaPOO\\BibliotecaErrores\\BibliotecaErrores.csproj",
-      "packagesPath": "C:\\Users\\salaz\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos\\UNIDEP\\POO\\2026\\practica final\\ProyectoBibliotecaPOO\\BibliotecaErrores\\obj\\",
+      "projectPath": "C:\\Users\\95122\\OneDrive\\Documents\\Biblioteca2026\\Biblioteca\\BibliotecaErrores.csproj",
+      "packagesPath": "C:\\Users\\95122\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\95122\\OneDrive\\Documents\\Biblioteca2026\\Biblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "UsingMicrosoftNETSdk": false,
@@ -997,7 +903,7 @@
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\salaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\95122\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1005,10 +911,12 @@
         "net48"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net48": {
+          "framework": "net48",
           "projectReferences": {}
         }
       },
@@ -1020,10 +928,11 @@
     },
     "frameworks": {
       "net48": {
+        "framework": "net48",
         "dependencies": {
           "MySql.Data": {
             "target": "Package",
-            "version": "[9.6.0, )"
+            "version": "[26.10.0, )"
           }
         }
       }

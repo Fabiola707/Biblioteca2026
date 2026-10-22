@@ -1,4 +1,7 @@
 ************CheckList**********************
+-----------------------------------------------------------------------------------------------------------------------------------------------
+							miercoles 21 de octubre 2026
+-----------------------------------------------------------------------------------------------------------------------------------------------
 en el form de libros
 	- linea 365 //List<Libro> lista = repo.FiltrarPorCategoria(cmbFiltroCategoria.SelectedValue);
                     List<Libro> lista = repo.FiltrarPorCategoria(idCategoria); //cambiar el filtro de categoria por el id la cual ya es un int
@@ -9,3 +12,36 @@ form de prestamos
 	-linea 127    prestamo.FechaPrestamo = dtpFechaPrestamo.Value.Date;//me gusta el valor de date time
 	-linea 141 
                 if (repo.Registrar(prestamo, detalles)) // agregar detalles pasar los detalles como un segundo parametro
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+							jueves 22 de octubre 2026
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+los using mysql de los repositorios
+
+en  AlumnoRepositorio
+	-linea 20                 string query = "SELECT * FROM alumnos ORDER BY apellidos, nombre";//agregar la letra "o"
+	-linea 34           alumno.Apellidos = dr["apellidos"].ToString();// agregar letra "s" para apellidos
+
+en PrestamosRepositorio
+	-linea 261                 comm.Parameters.AddWithValue("@id_alumno", prestamo.IDAlumno);//añadir el id
+	-linea 292                 libroRepo.DisminuirExistencia(detalle.IDLibro, detalle.Cantidad);//cambiar el 1 por el detalle de cantidad
+	-linea 75                               "WHERE p.estado = 'Activo' " + //cambio de devuelto a activo
+
+en LibroRepositorio
+	-linea 93 y 94                         libro.ISBN = dr["isbn"].ToString();//intercambiarlo, titulo por isbn
+                        libro.Titulo = dr["titulo"].ToString();//cambiarlo, isbn por titulo
+	-linea 151                         libro.Existencia = Convert.ToInt32(dr["existencia"].ToString());//cambiar "id" por existencia
+	-linea 346                comm.Parameters.AddWithValue("@existencia", libro.Existencia);//quitar la "s"
+	-linea 378 y 379                 comm.Parameters.AddWithValue("@titulo", libro.Titulo);//intercambio de isbn a titulo
+                comm.Parameters.AddWithValue("@isbn", libro.ISBN);// de titulo a isbn
+	-linea 239                                "AND l.existencia > 0 " +// quitar la s
+	linea 450                                "WHERE id = @id AND existencia >= @cantidad";// agregar el =, es >=
+
+en form Alumnos
+	-linea 62             txtNombre.Text = alumno.Nombre;//cambiar matricula por nombre
+	-linea 272                List<Alumno> lista = repo.BuscarPorNombre(nombre);// cambiar el buscar por matricula a nombre
+	-linea 161                                "WHERE CONCAT(nombre, ' ', apellidos) LIKE @nombre " +//agregar s
+
+en form libros
+	-linea 301                 List<Libro> lista = repo.BuscarPorTitulo(titulo);//cambiar el isbn por titulo

@@ -59,7 +59,7 @@ namespace Biblioteca.Forms
 
             idSeleccionado = alumno.ID;
             txtMatricula.Text = alumno.Matricula;
-            txtNombre.Text = alumno.Matricula;
+            txtNombre.Text = alumno.Nombre;//cambiar matricula por nombre
             txtApellidos.Text = alumno.Apellidos;
             txtCarrera.Text = alumno.Carrera;
             chkActivo.Checked = alumno.Activo;
@@ -269,7 +269,7 @@ namespace Biblioteca.Forms
             try
             {
                 AlumnoRepositorio repo = new AlumnoRepositorio();
-                List<Alumno> lista = repo.BuscarPorMatricula(nombre);
+                List<Alumno> lista = repo.BuscarPorNombre(nombre);// cambiar el buscar por matricula a nombre
 
                 MostrarLista(lista);
 
@@ -295,6 +295,11 @@ namespace Biblioteca.Forms
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

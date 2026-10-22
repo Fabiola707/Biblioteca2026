@@ -72,7 +72,7 @@ namespace Biblioteca.Repositories
                                "a.matricula, CONCAT(a.nombre, ' ', a.apellidos) AS alumno " +
                                "FROM prestamos p " +
                                "INNER JOIN alumnos a ON p.id_alumno = a.id " +
-                               "WHERE p.estado = 'Devuelto' " +
+                               "WHERE p.estado = 'Activo' " + //cambio de devuelto a activo
                                "ORDER BY p.id DESC";
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
@@ -258,7 +258,7 @@ namespace Biblioteca.Repositories
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
 
-                comm.Parameters.AddWithValue("@alumno", prestamo.IDAlumno);
+                comm.Parameters.AddWithValue("@id_alumno", prestamo.IDAlumno);//añadir el id
                 comm.Parameters.AddWithValue("@fecha_prestamo", prestamo.FechaPrestamo.Date);
                 comm.Parameters.AddWithValue("@fecha_limite", prestamo.FechaLimite.Date);
 
@@ -289,7 +289,7 @@ namespace Biblioteca.Repositories
 
                     commDetalle.ExecuteNonQuery();
 
-                    libroRepo.DisminuirExistencia(detalle.IDLibro, 1);
+                    libroRepo.DisminuirExistencia(detalle.IDLibro, detalle.Cantidad);//cambiar el 1 por el detalle de cantidad
 
                     detalle.IDPrestamo = idPrestamo;
                 }
@@ -337,7 +337,7 @@ namespace Biblioteca.Repositories
             {
                 DetallePrestamo detalle = detalles[i];
 
-                libroRepo.AumentarExistencia(detalle.IDLibro, 1);
+                libroRepo.AumentarExistencia(detalle.IDLibro, 1);//
             }
 
             MySqlConnection conn = new MySqlConnection(Utils.connStr);

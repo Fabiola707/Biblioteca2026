@@ -17,7 +17,7 @@ namespace Biblioteca.Repositories
             {
                 conn.Open();
 
-                string query = "SELECT * FROM alumns ORDER BY apellidos, nombre";
+                string query = "SELECT * FROM alumnos ORDER BY apellidos, nombre";//agregar la letra "o"
 
                 MySqlCommand comm = new MySqlCommand(query, conn);
                 MySqlDataReader dr = comm.ExecuteReader();
@@ -31,7 +31,7 @@ namespace Biblioteca.Repositories
                         alumno.ID = Convert.ToInt32(dr["id"].ToString());
                         alumno.Matricula = dr["matricula"].ToString();
                         alumno.Nombre = dr["nombre"].ToString();
-                        alumno.Apellidos = dr["apellido"].ToString();
+                        alumno.Apellidos = dr["apellidos"].ToString();// agregar letra "s" para apellidos
                         alumno.Carrera = dr["carrera"].ToString();
                         alumno.Activo = Convert.ToInt32(dr["activo"].ToString()) == 1;
 
@@ -158,7 +158,7 @@ namespace Biblioteca.Repositories
                 conn.Open();
 
                 string query = "SELECT * FROM alumnos " +
-                               "WHERE CONCAT(nombre, ' ', apellido) LIKE @nombre " +
+                               "WHERE CONCAT(nombre, ' ', apellidos) LIKE @nombre " +//agregar s
                                "ORDER BY apellidos, nombre";
 
                 MySqlCommand comm = new MySqlCommand(query, conn);

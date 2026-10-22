@@ -1,4 +1,4 @@
--- ============================================================
+/*-- ============================================================
 -- Sistema de administración de biblioteca escolar
 -- Base de datos: poo_biblioteca
 -- MySQL 8.x
@@ -192,3 +192,4 @@ INSERT INTO detalle_prestamo (id_prestamo, id_libro, cantidad) VALUES
 (4, 8, 2),
 (5, 3, 2),
 (6, 7, 1);
+*/

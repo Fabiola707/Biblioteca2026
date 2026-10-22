@@ -298,7 +298,7 @@ namespace Biblioteca.Forms
             try
             {
                 LibroRepositorio repo = new LibroRepositorio();
-                List<Libro> lista = repo.BuscarPorISBN(titulo);
+                List<Libro> lista = repo.BuscarPorTitulo(titulo);//cambiar el isbn por titulo
 
                 MostrarLista(lista);
 
